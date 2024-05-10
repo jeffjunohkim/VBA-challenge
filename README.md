@@ -1,21 +1,44 @@
-Instructions
-Create a script that loops through all the stocks for each quarter and outputs the following information:
+# Stock Data Summary for All Quarters
 
-The ticker symbol
+## Overview
+This VBA script is designed to summarize stock data across four quarterly sheets within an Excel workbook. It calculates the total quarterly change, total percentage change, and total stock volume for each ticker symbol. Additionally, it identifies the greatest percentage increase, greatest percentage decrease, and greatest total volume among all tickers.
 
-Quarterly change from the opening price at the beginning of a given quarter to the closing price at the end of that quarter.
+## Features
+- Checks for the existence of quarter sheets (Q1, Q2, Q3, Q4) before proceeding.
+- Adds headers for summary columns in each quarter sheet.
+- Creates a dictionary to store unique tickers and their summaries.
+- Calculates the quarterly change and percent change for each ticker.
+- Identifies tickers with the greatest increase, decrease, and volume.
+- Outputs the summary to the specified columns in each quarter sheet.
+- Auto-fits columns for better readability.
 
-The percentage change from the opening price at the beginning of a given quarter to the closing price at the end of that quarter.
+## How to Run
+1. Open the Excel workbook that contains the stock data in separate sheets named Q1, Q2, Q3, and Q4.
+2. Press `ALT + F11` to open the Visual Basic for Applications (VBA) editor.
+3. Insert a new module and paste the provided VBA script into the module.
+4. Close the VBA editor and run the script by pressing `F5` or by selecting 'Run Sub/UserForm' from the toolbar.
 
-The total stock volume of the stock. 
+## Pre-requisites
+- Ensure that each quarter sheet has stock data starting from the second row.
+- The first row should contain headers, and the data should include ticker symbols, dates, and stock volumes.
 
-Add functionality to your script to return the stock with the "Greatest % increase", "Greatest % decrease", and "Greatest total volume".
+## Output
+The script will output the following in each quarter sheet:
+- Ticker Symbol
+- Total Quarterly Change
+- Total Percentage Change
+- Total Stock Volume
+- Greatest % Increase (with corresponding ticker symbol)
+- Greatest % Decrease (with corresponding ticker symbol)
+- Greatest Total Volume (with corresponding ticker symbol)
 
-Make the appropriate adjustments to your VBA script to enable it to run on every worksheet (that is, every quarter) at once
+## Notes
+- The script assumes that the data is sorted by ticker symbol and date.
+- If a quarter sheet does not exist, a message box will alert the user and the script will exit.
+- Code source:  Learning assistant, google
 
-Make sure to use conditional formatting that will highlight positive change in green and negative change in red
+## Disclaimer
+This script is for educational purposes only. Please ensure that you have backed up your data before running the script as it will modify the contents of your workbook.
 
 
-Note:
-Github repo location: https://github.com/jeffjunohkim/VBA-challenge.git
-Code source:  Learning assistant
+
